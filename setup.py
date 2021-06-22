@@ -48,11 +48,13 @@ requirements = open('requirements.txt').readlines()
 setup(
     name='django-password-history',
     version=version,
-    description="""Your project description goes here""",
+    description="""Django module meant to allow django users to keep a history of their previously used passwords.""",
+    long_description_content_type='text/markdown',
     long_description=readme + '\n\n' + history,
     author='Roderick Smith',
     author_email='smithroderick17@gmail.com',
-    url='',
+    url='https://github.com/Lenders-Cooperative/django-password-history',
+    download_url='https://github.com/Lenders-Cooperative/django-password-history/archive/refs/tags/vf.tar.gz',
     packages=[
         'django_password_history',
     ],

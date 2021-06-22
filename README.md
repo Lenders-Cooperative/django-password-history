@@ -3,8 +3,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/Lenders-Cooperative/django-password-history)](https://github.com/Lenders-Cooperative/django-password-history/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/Lenders-Cooperative/django-password-history/pulls)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 </div>
@@ -64,18 +64,20 @@ coverage run --source django_password_history runtests.py
 In order to use the system you must add django_password_history to your installed apps.
 
 ```
-
+INSTALLED_APPS = [
+    'django_password_history'
+]
 ```
 
 
 ## Built Using
 
-- [Django](https://www.djangoproject.com/) - Database
+- [Django](https://www.djangoproject.com/) - Web Framework
 - [Cookiecutter Django Package](https://github.com/pydanny/cookiecutter-djangopackage) - Cookie Cutter Django Package
 
 ## Authors
-
-- [@rsmith0717](https://github.com/rsmith0717) - Working on behalf of Lender's Cooperative
+- David Graves - Working on behalf of Lender's Cooperative
+- [Roderick Smith](https://github.com/rsmith0717) - Working on behalf of Lender's Cooperative
 
 
 ## Acknowledgements
