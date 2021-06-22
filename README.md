@@ -3,8 +3,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/Lenders-Cooperative/django-password-history)](https://github.com/Lenders-Cooperative/django-password-history/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/Lenders-Cooperative/django-password-history/pulls)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 </div>
@@ -19,6 +19,7 @@
 
 - [About](#about)
 - [Getting Started](#getting-started)
+- [Running Tests](#running-tests)
 - [Usage](#usage)
 - [Built Using](#built-using)
 - [Authors](#authors)
@@ -30,14 +31,11 @@ Django module meant to allow django users to keep a history of their previously 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Follow these instructions to install and setup django-password-history in your django project.
 
 ### Prerequisites
 
-The only prerequisite to installing django-password-history is having django 2 installed.
-```
-Django 2
-```
+The only prerequisites to installing django-password-history is having django 2 installed in a Python 3 environment.
 
 ### Installing
 
@@ -50,7 +48,7 @@ pip install django-password-history
 
 End with an example of getting some data out of the system or using it for a little demo.
 
-## 🔧 Running the tests <a name = "tests"></a>
+## Running Tests
 
 The test suite for this package is a work in progress. The initial sample test can be run by using the following command.
 
@@ -61,21 +59,42 @@ coverage run --source django_password_history runtests.py
 
 ## Usage
 
-In order to use the system you must add django_password_history to your installed apps.
+In order to use the system you must add django_password_history to your installed apps in your settings.py file.
 
 ```
+INSTALLED_APPS = [
+    'django_password_history'
+]
+```
+
+Next you need to define how many historical passwords you want to compare on to the new password when a password is chanced. The default and max is 5 previous passwords.
 
 ```
+PREVIOUS_PASSWORD_COUNT = 3
+```
+
+THe UserPasswordHistory has a one to one relationship with your user model as defined in your settings.py file.
+
+```
+AUTH_USER_MODEL = "users.User"
+```
+
+To import the UserPasswordHistory model add the following to the top of the desired python file.
+
+```
+from django_password_history.models import UserPasswordHistory
+```
+
 
 
 ## Built Using
 
-- [Django](https://www.djangoproject.com/) - Database
+- [Django](https://www.djangoproject.com/) - Web Framework
 - [Cookiecutter Django Package](https://github.com/pydanny/cookiecutter-djangopackage) - Cookie Cutter Django Package
 
 ## Authors
-
-- [@rsmith0717](https://github.com/rsmith0717) - Working on behalf of Lender's Cooperative
+- David Graves - Working on behalf of Lender's Cooperative
+- [Roderick Smith](https://github.com/rsmith0717) - Working on behalf of Lender's Cooperative
 
 
 ## Acknowledgements
