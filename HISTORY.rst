@@ -9,7 +9,7 @@ History
 * First release on PyPI.
 
 
-1.0.1 (2021-12-08)
+1.0.3 (2021-12-08)
 ++++++++++++++++++
 
 * Accommodate tenant architecture by checking for a SiteSettings model to see if previous_password_count has been set.
