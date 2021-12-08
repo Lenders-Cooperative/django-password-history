@@ -13,11 +13,21 @@ class UserPasswordHistory(models.Model):
     password_5 = models.CharField(blank=True, null=True, max_length=128)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def password_is_used(self, password):
-        if settings.PREVIOUS_PASSWORD_COUNT:
-            previous_passwords_count = settings.PREVIOUS_PASSWORD_COUNT
+    def password_is_used(self, password, site_id=1):
+        previous_passwords_count = 5
+        SiteSettings = None
+
+        use_site_setting_password_history = getattr(settings,"USE_SITE_SETTINGS_PASSWORD_HISTORY",False)
+        
+        try:
+            SiteSettings = apps.get_model("setup","SiteSettings")
+        except:
+            SiteSettings = None
+
+        if use_site_setting_password_history and SiteSettings:
+            previous_passwords_count = SiteSettings.objects.get(id=site_id).previous_password_count
         else:
-            previous_passwords_count = 5
+            previous_passwords_count = getattr(settings,"PREVIOUS_PASSWORD_COUNT", 5)
 
         if previous_passwords_count:
             for x in range(1, min(previous_passwords_count, 5) + 1):
