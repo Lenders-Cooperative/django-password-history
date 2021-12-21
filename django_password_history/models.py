@@ -1,3 +1,9 @@
+#
+# Created on Tue Dec 21 2021
+#
+# Copyright (c) 2021 Lenders Cooperative, a division of Summit Technology Group, Inc.
+#
+
 from django.db import models
 from django.conf import settings
 from django.apps import apps
