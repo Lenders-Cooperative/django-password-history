@@ -19,6 +19,9 @@ class UserPasswordHistory(models.Model):
     password_5 = models.CharField(blank=True, null=True, max_length=128)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.user.username + "_password_history"
+
     def password_is_used(self, password, site_id=1):
         previous_passwords_count = 5
         SiteSettings = None
