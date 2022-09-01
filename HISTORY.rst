@@ -21,3 +21,10 @@ History
 
 * Set django admin user fields to autocomplete, and change password fields to read only.
 * Third release on PyPI.
+
+
+1.0.5 (2022-08-31)
+++++++++++++++++++
+
+* Extend support of password history up to 24 passwords.
+* Fourth release on PyPI.
