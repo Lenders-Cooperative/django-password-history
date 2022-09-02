@@ -43,7 +43,6 @@ if sys.argv[-1] == 'tag':
 
 readme = open('README.md').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
-requirements = open('requirements.txt').readlines()
 
 setup(
     name='django-password-history',
@@ -59,7 +58,10 @@ setup(
         'django_password_history',
     ],
     include_package_data=True,
-    install_requires=requirements,
+    install_requires=[
+        'django-model-utils==4.2.0',
+        'djangoql==0.15.4',
+    ],
     license="BSD",
     zip_safe=False,
     keywords='django-password-history',
