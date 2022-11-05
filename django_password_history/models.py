@@ -62,7 +62,7 @@ class UserPasswordHistory(models.Model):
             previous_passwords_count = getattr(settings, 'PREVIOUS_PASSWORD_COUNT', DEFAULT_PASSWORD_COUNT)
 
         if previous_passwords_count:
-            for x in range(1, min(previous_passwords_count, 5) + 1):
+            for x in range(1, previous_passwords_count + 1):
                 f = getattr(self, f'password_{x}', None)
                 if f is not None and check_password(password, f):
                     return True
