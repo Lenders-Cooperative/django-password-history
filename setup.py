@@ -59,8 +59,8 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'django-model-utils==4.2.0',
-        'djangoql==0.17.1',
+        'django-model-utils>=4.2.0',
+        'djangoql>=0.17.1',
     ],
     license="BSD",
     zip_safe=False,
