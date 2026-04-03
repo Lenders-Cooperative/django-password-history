@@ -1,8 +1,10 @@
+> **DEPRECATED:** This repository is no longer maintained. Its functionality has been inlined into the LOS codebase ([DLOS-38915](https://summitgrp.atlassian.net/browse/DLOS-38915)). This repository will be archived no later than **June 1, 2026**. No further changes will be accepted.
+
 <h1 align="center">Django Password History</h1>
 
 <div align="center">
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![Status](https://img.shields.io/badge/status-deprecated-red.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/Lenders-Cooperative/django-password-history)](https://github.com/Lenders-Cooperative/django-password-history/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/Lenders-Cooperative/django-password-history/pulls)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
