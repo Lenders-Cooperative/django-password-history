@@ -8,8 +8,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Django = ">=3.2.15, <6.0"
-django-model-utils = ">=4.2.0"
+Django = ">=4.2, <6.0"
+django-model-utils = ">=4.4.0"
 djangoql = ">=0.15.4"
 
 
