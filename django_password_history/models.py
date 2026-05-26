@@ -7,7 +7,7 @@
 from django.db import models
 from django.conf import settings
 from django.apps import apps
-from django.contrib.auth.hashers import make_password, check_password
+from django.contrib.auth.hashers import check_password
 
 DEFAULT_PASSWORD_COUNT = 5   # set to 5 to maintain backward compatibility
 
@@ -50,7 +50,7 @@ class UserPasswordHistory(models.Model):
         SiteSettings = None
 
         use_site_setting_password_history = getattr(settings, 'USE_SITE_SETTINGS_PASSWORD_HISTORY', False)
-        
+
         try:
             SiteSettings = apps.get_model('setup', 'SiteSettings')
         except:

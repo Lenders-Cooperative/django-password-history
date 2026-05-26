@@ -31,10 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'django_password_history',
-    
-    'django_password_history.test_utils.test_app'
-    
-
+    # 'django_password_history.test_utils.test_app.apps.TestAppConfig'
     # if your app has other dependencies that need to be added to the site
     # they should be added here
 ]

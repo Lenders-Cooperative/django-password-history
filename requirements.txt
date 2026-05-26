@@ -1,3 +1,0 @@
-django-model-utils==4.2.0
-djangoql==0.15.4 # https://github.com/ivelum/djangoql
-# Additional requirements go here

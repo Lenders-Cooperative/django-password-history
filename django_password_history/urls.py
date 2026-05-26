@@ -5,7 +5,7 @@
 #
 # -*- coding: utf-8 -*-
 
-from django.conf.urls import url
+from django.urls import re_path
 from django.views.generic import TemplateView
 
 from . import views
@@ -13,29 +13,29 @@ from . import views
 
 app_name = 'django_password_history'
 urlpatterns = [
-    url(
-        regex="^UserPasswordHistory/~create/$",
-        view=views.UserPasswordHistoryCreateView.as_view(),
+    re_path(
+        r"^UserPasswordHistory/~create/$",
+        views.UserPasswordHistoryCreateView.as_view(),
         name='UserPasswordHistory_create',
     ),
-    url(
-        regex="^UserPasswordHistory/(?P<pk>\d+)/~delete/$",
-        view=views.UserPasswordHistoryDeleteView.as_view(),
+    re_path(
+        r"^UserPasswordHistory/(?P<pk>\d+)/~delete/$",
+        views.UserPasswordHistoryDeleteView.as_view(),
         name='UserPasswordHistory_delete',
     ),
-    url(
-        regex="^UserPasswordHistory/(?P<pk>\d+)/$",
-        view=views.UserPasswordHistoryDetailView.as_view(),
+    re_path(
+        r"^UserPasswordHistory/(?P<pk>\d+)/$",
+        views.UserPasswordHistoryDetailView.as_view(),
         name='UserPasswordHistory_detail',
     ),
-    url(
-        regex="^UserPasswordHistory/(?P<pk>\d+)/~update/$",
-        view=views.UserPasswordHistoryUpdateView.as_view(),
+    re_path(
+        r"^UserPasswordHistory/(?P<pk>\d+)/~update/$",
+        views.UserPasswordHistoryUpdateView.as_view(),
         name='UserPasswordHistory_update',
     ),
-    url(
-        regex="^UserPasswordHistory/$",
-        view=views.UserPasswordHistoryListView.as_view(),
+    re_path(
+        r"^UserPasswordHistory/$",
+        views.UserPasswordHistoryListView.as_view(),
         name='UserPasswordHistory_list',
     ),
 	]
